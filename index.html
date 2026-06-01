@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Birthday Surprise</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="topbar">
+      <div class="brand">Birthday Surprise</div>
+      <nav>
+        <a href="#cake">Cake</a>
+        <a href="#secret">Secret</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="cake">
+        <h1>Happy Birthday!</h1>
+        <p class="subtitle">Click the candle to reveal your secret message.</p>
+
+        <div class="card">
+          <div class="cake">
+            <div class="plate"></div>
+            <div class="cake-shadow"></div>
+            <div class="candle" id="candle" aria-label="Birthday candle" role="button" tabindex="0">
+              <div class="wick"></div>
+              <div class="flame"></div>
+            </div>
+            <div class="icing"></div>
+            <div class="layer layer-top"></div>
+            <div class="layer layer-bottom"></div>
+            <div class="secret-overlay" id="secretMessage" aria-hidden="true">
+              <div class="secret-card">
+                <h2>Secret Birthday Wish</h2>
+                <p>Surprise! May your year ahead be filled with joy, laughter, and sweet adventures. You deserve all the best—happy birthday! Keep smiling and enjoy your special day surrounded by love and good cheer.</p>
+                <div class="share-row">
+                  <button id="shareButton" type="button">Share this page</button>
+                  <span class="share-hint" id="shareHint">Link copied!</span>
+                </div>
+                <div class="share-fallback" id="shareFallback" hidden>
+                  <p>Copy this link manually:</p>
+                  <input id="shareInput" class="share-input" readonly />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hint">Tap the candle for a surprise!</div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
